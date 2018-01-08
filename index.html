@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XX intranet</title>
+
+    <style>
+        label {
+            float:left;
+            width:5%;
+            text-align: right;
+            margin-right: 0.5em;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .form-field-no-caption{
+            margin-left: 5%;
+            padding-left: 0.5em;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<h1>XX</h1>
+<h2>All XX</h2>
+<a href="controllers/getAllXX.php">All XXes</a>
+
+<h2>Get XX by Id</h2>
+<form action="controllers/getXXById.php" method="post">
+    Id<input type="number" name="id"/>
+    <input type="submit" value="Search">
+
+</form>
+
+<h2>New XX</h2>
+<form action="controllers/postXX.php" method="post">
+    <table>
+        <tr>
+            <td>Navn</td>
+            <td><input type="text" name="navn"/></td>
+        </tr>
+        <tr>
+            <td>X1</td>
+            <td>
+                <input type="text" name="x1"/>
+            </td>
+        </tr>
+        <tr>
+            <td>X2</td>
+            <td>
+                <input type="text" name="x2"/>
+            </td>
+        </tr>
+        <tr>
+            <td>X3</td>
+            <td>
+                <input type="text" name="x3"/>
+            </td>
+        </tr>
+        <tr>
+            <td>X4</td>
+            <td>
+                <input type="text" name="x4"/>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input style="width: 100%;" type="submit" value="Add"/>
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+<!--Name er vigtige variable som er identitisk med det som står for=""-->
+
+<h2>Update XX</h2>
+<form action="controllers/putXX.php" method="post">
+    <label for="id">Id</label>
+    <input type="number" name="id" id="id"/><br/>
+    <label for="navn">Navn</label>
+    <input type="text" name="navn" id="navn"/><br/>
+    <label for="x1">X1</label>
+    <input type="text" name="x1" id="x1"> <br/>
+    <label for="x2">X2</label>
+    <input type="text" name="x2" id="x2"/> <br/>
+    <label for="x3">X3</label>
+    <input type="text" name="x3" id="x3"/> <br/>
+    <label for="x4">X4</label>
+    <input type="text" name="x4" id="x4"/> <br/>
+
+    <span class="form-field-no-caption">
+        <input type="submit" value="Update">
+    </span>
+
+</form>
+
+<h2>Delete XX by Id</h2>
+<form action="controllers/deleteXX.php" method="post">
+    Id<input type="number" name="id">
+    <input type="submit" value="Delete">
+</form>
+
+</body>
+</html>

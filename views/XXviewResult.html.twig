@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Students</title>
+</head>
+<body>
+
+<h1>XXes</h1>
+
+{% if XXes is empty%}
+No xxes
+{%else %}
+<ul>
+    {% for x in XXes %}
+    <li>
+        {{x.Id}}
+        <b>{{x.Navn}}</b>:
+        <i>{{x.X1}}</i>,
+        {{x.X2}}
+        {{x.X3}}
+        {{x.X4}}
+    </li>
+    {%endfor %}</ul>
+{%endif%}
+
+</body>
+</html>
