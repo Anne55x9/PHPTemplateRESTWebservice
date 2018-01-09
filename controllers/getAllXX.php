@@ -6,6 +6,7 @@
  * Time: 10:50
  */
 
+try{
 $uri = "http://restwebservicetemplate20180108090004.azurewebsites.net/Service1.svc/XXes";
 $jsondata = file_get_contents($uri);
 
@@ -23,3 +24,7 @@ $template = $twig->loadTemplate('XXviewResult.html.twig');
 #Array skal være identisk med den titel som er givet i twig.view på listen
 $parametersToTwig = array("XXes"=>$XXes);
 echo $template->render($parametersToTwig);
+
+} catch(SoapFault $exception){
+    print_r($exception->getMessage());
+}

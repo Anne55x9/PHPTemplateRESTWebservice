@@ -14,6 +14,7 @@ $X4=$_POST["x4"];
 $data = array("Navn"=>$navn, "X1"=>$X1, "X2"=>$X2, "X3"=> $X3, "X4"=> $X4);
 $data_string = json_encode($data);
 
+try{
 $uri = "http://restwebservicetemplate20180108090004.azurewebsites.net/Service1.svc/XXes";
 $ch = curl_init($uri);
 
@@ -43,3 +44,6 @@ $template = $twig->loadTemplate('XXviewResult.html.twig');
 
 $parametersToTwig = array("XXes"=>$XXArray);
 echo $template->render($parametersToTwig);
+} catch(SoapFault $exception){
+    print_r($exception->getMessage());
+}
